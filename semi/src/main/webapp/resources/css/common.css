@@ -1,0 +1,132 @@
+body {
+  background-color: #ffffff;
+  margin: 0;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#main-layout {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+  position: relative;
+}
+
+#app {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 75%;
+  margin-top: 100px;
+}
+
+.tab-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab-bar .tab {
+  background-color: #d0c1e3; /* 밝은 보라색 */
+  color: white; /* 흰색 글자 */
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.tab-bar .tab.clicked {
+  background-color: #b58de6 !important; /* 선택된 탭 더 진한 보라색 */
+}
+
+.tab-bar .tab:hover {
+  background-color: #b58de6; /* Hover 시 진한 보라색 */
+  color: white;
+}
+
+.banner-category {
+  display: none; /* 기본적으로 숨김 */
+  text-align: center; /* 버튼 가운데 정렬 */
+  margin: 20px 0;
+}
+
+.banner-category.active {
+  display: flex; /* 활성화된 배너만 표시 */
+  justify-content: center; /* 버튼을 가로로 가운데 정렬 */
+  gap: 20px; /* 버튼 간격 */
+  flex-wrap: wrap; /* 버튼이 여러 줄로 배치될 경우 */
+}
+
+.banner-button,
+.banner-button1 {
+  background-color: #d0c1e3; /* 버튼 배경 밝은 보라색 */
+  color: white; /* 글자색 흰색 */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  margin: 10px;
+  min-width: 120px;
+  text-align: center;
+}
+
+.banner-button:hover,
+.banner-button1:hover {
+  background-color: #b58de6; /* Hover 시 진한 보라색 */
+}
+
+#searchForm {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: 50%;
+  margin: 20px auto;
+}
+
+#searchText {
+  flex: 1;
+  color: #333; /* 입력 텍스트 색상 */
+  font-weight: bold;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #ccc;
+  height: 38px;
+  padding: 0 10px;
+}
+
+#searchButton {
+  border-radius: 0 4px 4px 0;
+  border: 1px solid #28a745;
+  height: 38px;
+  padding: 0 20px;
+  background-color: #d0c1e3; /* 버튼 배경 밝은 보라색 */
+  color: white; /* 글자 흰색 */
+  cursor: pointer;
+}
+
+#searchButton:hover {
+  background-color: #b58de6; /* Hover 시 진한 보라색 */
+}
+
+#image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+#image-container img {
+  width: 200px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

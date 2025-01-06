@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key="selectProductDetail">
+    SELECT PRODUCT_NO,
+           STORE_NO,
+           PRODUCT_NAME,
+           PRODUCT_PRICE,
+           IMAGE_URL,
+           LINKED
+    FROM PRODUCT
+    WHERE PRODUCT_NO = ?
+</entry>
+
+<entry key="selectReviewsByProductNo">
+    SELECT REVIEW_NO,
+           REVIEW_WRITER,
+           PRODUCT_NO,
+           REVIEW_CONTENT,
+           REVIEW_DATE,
+           REVIEW_SCORE
+    FROM REVIEW
+    WHERE PRODUCT_NO = ?
+    ORDER BY REVIEW_DATE ASC
+</entry>
+</properties>

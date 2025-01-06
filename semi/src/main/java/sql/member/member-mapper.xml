@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="login">
+        SELECT * 
+        FROM MEMBER
+        WHERE USER_ID = ?
+          AND USER_PWD = ?
+          AND MEMBER_STATUS = 'Y'
+    </entry>
+    
+    <entry key="insert">
+    	INSERT INTO MEMBER VALUES
+		(MEMBER_SEQ.NEXTVAL, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT, DEFAULT, NULL)
+    </entry>
+    
+    <entry key="idCheck">
+    	SELECT COUNT(*) COUNT
+	 	FROM MEMBER
+	 	WHERE USER_ID = ?
+    </entry>
+</properties>
